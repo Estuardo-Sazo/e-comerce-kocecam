@@ -62,8 +62,8 @@ const cardProduct=(title, description, imageUrl, price, category, productId)=>{
 
     cardText.innerText = `Categoria: ${category}`;
     cardButtonView.innerText = "Ver";
-    cardButtonView.href = `/details.html?ref=${productId}`;
-    cardButtonAdd.innerText = "Agregar";
+    cardButtonView.href = `/views/detailProduct.html?ref=${productId}`;
+    cardButtonAdd.innerText = "Comprar  ";
     cardButtonAdd.href = `/cart.html?ref=${productId}`;
   
     // Build structure
@@ -106,6 +106,25 @@ const getAllProducts = () => {
   
           mainContent.appendChild(card);
         }
+      });
+  };
+
+
+  const getProduct = (id) => {
+    const url = `${urlBase}//products/${id}.json`;
+  
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then((product) => {
+        console.log(product);
+        imageElement.src = product.imageUrl;
+        titleElement.innerText = product.title;
+        priceElement.innerText = `${money} ${product.price}`;
+        categoryElement.innerText = product.category;
+        descriptionElement.innerText = product.description;
+
       });
   };
 

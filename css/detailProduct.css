@@ -1,0 +1,16 @@
+.card-body .title-card{
+    text-align: left;
+    font-size:1.8rem;
+}
+
+.card-body .subtitle-card{
+    text-align: left;
+    font-size:2.2rem;
+    font-weight: 600;
+
+}
+
+.card-body p{
+    text-align: left;
+    font-size:0.9rem;
+}
