@@ -51,19 +51,19 @@ const cardProduct = (title, description, imageUrl, price, category, productId) =
 
 
   cardButtonView.classList.add("rounded-pill", "btn", "btn-primary", "btn-sm");
-  cardButtonAdd.classList.add("rounded-pill", "btn", "btn-warning", "btn-sm");
+  cardButtonAdd.classList.add("rounded-pill", "btn", "btn-warning", "btn-sm","add-cart");
 
   // Add values to the elements
   cardImage.src = imageUrl;
   cardTitle.innerText = title;
   cardSubtitle.innerText = `${money} ${price}`;
+  cardButtonAdd.setAttribute("id",productId);
 
 
   cardText.innerText = `Categoria: ${category}`;
   cardButtonView.innerText = "Ver";
   cardButtonView.href = `/views/detailProduct.html?ref=${productId}`;
-  cardButtonAdd.innerText = "Comprar  ";
-  cardButtonAdd.href = `/cart.html?ref=${productId}`;
+  cardButtonAdd.innerText = "Comprar";
 
   // Build structure
   cardContainer.appendChild(cardImage);
@@ -115,7 +115,6 @@ const getAllProducts = () => {
       return res.json();
     })
     .then((products) => {
-      console.log(products);
       for (const key in products) {
         const product = products[key];
 
