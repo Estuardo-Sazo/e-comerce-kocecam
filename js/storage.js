@@ -4,7 +4,6 @@ let countItem = document.getElementById("cart-count");
 
 const saveCartStorage = (cart) => {
     localStorage.setItem('Cart', JSON.stringify(cart));
-    addCountItem();
 }
 
 const addItemCart = (productId, title, price, amount = 1) => {
@@ -25,6 +24,7 @@ const addItemCart = (productId, title, price, amount = 1) => {
 const addCountItem=()=>{
         countItem.innerHTML= shoppingCart.length;
 }
+
 const deleteItemCart=(id) => {
     shoppingCart.forEach(function(sub, index, object) {
         if (sub.id === id) {
@@ -47,6 +47,23 @@ const addItemAmount = (id)=>{
     saveCartStorage(shoppingCart);
 }
 
+const removeItemAmount = (id)=>{
+    shoppingCart.forEach(function(sub, index, object) {
+        if (sub.id === id) {
+            if (object[index].amount ==1) {
+                deleteItemCart(id);
+                return;
+            }else{
+                object[index].amount = object[index].amount - 1;
+                object[index].subtotal = object[index].price * object[index].amount;
+            }
+            
+        }
+    });
+
+    saveCartStorage(shoppingCart);
+}
+
 
 if (!cart) {
     cart = shoppingCart;
@@ -54,8 +71,12 @@ if (!cart) {
 } else {
     shoppingCart = JSON.parse(cart);
 }
-console.table(shoppingCart);
-addCountItem();
+
+const initCar=()=>{
+    console.table(shoppingCart);
+    addCountItem();
+
+}
 
 
 
@@ -79,8 +100,9 @@ const getProductPlace = (id) => {
             });
 
             if(!repeat) {
-            addItemCart(id, product.title, product.price);
-                
+                addItemCart(id, product.title, product.price);
+                addCountItem();
+
             }
             console.table(shoppingCart);
 
@@ -88,11 +110,4 @@ const getProductPlace = (id) => {
 };
 
 
-// Click add product add cart
-$(document).on("click", ".add-cart", function (e) {
-    let element = $(this)[0];
-    let id = $(element).attr("id");
-    getProductPlace(id);
-
-});
 

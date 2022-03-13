@@ -56,7 +56,7 @@ const cardProduct = (title, description, imageUrl, price, category, productId) =
   // Add values to the elements
   cardImage.src = imageUrl;
   cardTitle.innerText = title;
-  cardSubtitle.innerText = `${money} ${price}`;
+  cardSubtitle.innerText = `${money} ${parseFloat(price).toFixed(2)}`;
   cardButtonAdd.setAttribute("id",productId);
 
 

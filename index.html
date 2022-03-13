@@ -12,6 +12,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -31,33 +33,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#"
-                >Todos los artículos</a
-              >
-            </li>
+           
             <li>
-              <a class="nav-link" href="/views/newProduct.html">Crear nuevo articulo</a>
+              <a class="nav-link" href="/views/newProduct.html">Crear Nuevo Articulo</a>
             </li>
           </ul>
-          <!-- <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form> -->
+       
         </div>
       </div>
     </nav>
     <div class="container">
-      <button type="button" class="btn btn-primary">
-        Ver Carrito <span id="cart-count" class="badge bg-secondary"></span>
-      </button>
+      <a  href="/views/cart.html" class="btn btn-primary">
+        <i class="bi bi-cart4"></i> <span id="cart-count" class="badge bg-secondary"></span>
+      </a>
       <main
         id="main-content"
         class="d-flex justify-content-evenly justify-content-lg-around flex-wrap align-content-between"
@@ -65,6 +53,25 @@
     
       </main>
     </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="modal-msg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Producto agregado al carrito de compras.</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+        <a href="/views/cart.html" class="btn btn-primary">Ver Carrito</a>
+      </div>
+    </div>
+  </div>
+</div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -72,8 +79,8 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/index.js"></script>
     <script src="/js/storage.js"></script>
+    <script src="/js/index.js"></script>
 
 
   </body>

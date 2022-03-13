@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/detailProduct.css" />
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../">Inicio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"
+                >Todos los artículos</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="create.html">Crear nuevo articulo</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form> -->
+        </div>
+      </div>
+    </nav>
+
+    <!--   <div class="shadow  card p-0 mt-2 rounded custom-card" >
+        <img
+          src="https://picsum.photos/150/150"
+          class="card-img-top"
+          alt="Imaegen Producto"
+        />
+        <div class="card-body">
+          <h5 class="card-title title-card">Azucar 5lb</h5>
+          <h5 class="card-subtitle subtitle-card">Q 16.00</h5> 
+          <p><strong>Categoria:</strong> Utencilios</p>           
+          <div class="d-grid gap-2 col-md-8 mx-auto">
+            <a href="#" id="btn-view" class="rounded-pill btn btn-primary  btn-sm">Ver</a>
+            <a href="#" id="btn-add" class="rounded-pill btn btn-warning btn-sm">Agregar</a>
+          </div>
+        </div>
+      </div> -->
+
+    <div class="container">
+        <a
+                      href="../"
+                      id="btn-view"
+                      class=" btn btn-success btn-sm mt-2"
+                      >Volver</a >
+      <main
+        id="main-content"
+        class="d-flex justify-content-evenly justify-content-lg-around flex-wrap align-content-between"
+      >
+      
+        <div class="col-md-10">
+          <div class="shadow card p-0 mt-2 rounded">
+            <div class="card-body">
+              <div class="row">
+              
+                <div class="col">
+                  <h5 class="card-title title-card" id="title">Carrito de Compras</h5>
+                  <h5 class="card-title title-card" >Total: <span id="total"></span></h5>
+
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Sub total</th>
+                        <th scope="col">Acciones</th>
+
+                      </tr>
+                    </thead>
+                    <tbody id="list-cart">
+                      
+                    </tbody>
+                  </table>
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/cart.js"></script>
+
+
+  </body>
+</html>
