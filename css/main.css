@@ -1,12 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300');
+ body {
+    font-family: "Montserrat", sans-serif;
+ }
+
 .custom-card{
-    width: 300px;
+    margin-top: 10px;
+    width: 18rem
 }
 
 .custom-card-image{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 .green-button {
     background-color: greenyellow;
+}
+
+.card-body .title-card{
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card-body .subtitle-card{
+    text-align: center;
+    font-size: 1.6rem;
+}
+ .card-body p{
+    color:#797D7F ;
+    text-align: center;
+    font-size: 0.8rem;
+ }
+
+.btn{
+    text-transform: uppercase;
+
 }
