@@ -15,3 +15,9 @@ $(document).on("click", ".add-cart", function (e) {
 
 
 });
+
+const getProductCategory = (category) =>{
+  console.log('Click', category);
+  mainContent.innerHTML='';
+  getAllProducts(category);
+}

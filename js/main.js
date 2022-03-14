@@ -108,7 +108,7 @@ const updateProduct = (title, description, imageUrl, price, category, productId)
     });
 };
 
-const getAllProducts = () => {
+const getAllProducts = (category="") => {
   const url = `${urlBase}/products.json`;
   fetch(url)
     .then((res) => {
@@ -117,17 +117,29 @@ const getAllProducts = () => {
     .then((products) => {
       for (const key in products) {
         const product = products[key];
+        if(category==''){
+          const card = cardProduct(
+            product.title,
+            product.description,
+            product.imageUrl,
+            product.price,
+            product.category,
+            key
+          );  
+          mainContent.appendChild(card);
+        }else if(product.category==category) {
 
-        const card = cardProduct(
-          product.title,
-          product.description,
-          product.imageUrl,
-          product.price,
-          product.category,
-          key
-        );
-
-        mainContent.appendChild(card);
+          const card = cardProduct(
+            product.title,
+            product.description,
+            product.imageUrl,
+            product.price,
+            product.category,
+            key
+          );  
+          mainContent.appendChild(card);
+        }
+        
       }
     });
 };
