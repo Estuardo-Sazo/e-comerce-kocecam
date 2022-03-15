@@ -62,7 +62,7 @@ const cardProduct = (title, description, imageUrl, price, category, productId) =
 
   cardText.innerText = `Categoria: ${category}`;
   cardButtonView.innerText = "Ver";
-  cardButtonView.href = `/views/detailProduct.html?ref=${productId}`;
+  cardButtonView.href = `./views/detailProduct.html?ref=${productId}`;
   cardButtonAdd.innerText = "Comprar";
 
   // Build structure
@@ -101,7 +101,7 @@ const updateProduct = (title, description, imageUrl, price, category, productId)
   }).
     then((res) => {
       if (res.ok) {
-        window.location.href = `/views/detailProduct.html?ref=${productId}`;
+        window.location.href = `./views/detailProduct.html?ref=${productId}`;
       } else {
         console.error(res);
       }
