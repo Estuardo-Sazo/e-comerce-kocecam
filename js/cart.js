@@ -18,7 +18,7 @@ const viewcar=()=>{
                 <a productId="${item.id}" href="#" class="rounded btn btn-light btn-sm remove"><i class="bi bi-dash-circle"></i></a>
 
                 <a productId="${item.id}" href="#" class="rounded btn btn-light btn-sm add"><i class="bi bi-plus-circle"></i></a>
-                <a href="/views/detailProduct.html?ref=${item.id}" class="rounded btn btn-light btn-sm"><i class="bi bi-eye"></i> Ver</a>
+                <a href="./views/detailProduct.html?ref=${item.id}" class="rounded btn btn-light btn-sm"><i class="bi bi-eye"></i> Ver</a>
                 <a productId="${item.id}" href="#" class="rounded btn btn-danger btn-sm delete"><i class="bi bi-trash"></i></a>
 
             </td>
