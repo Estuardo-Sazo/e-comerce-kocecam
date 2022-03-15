@@ -13,7 +13,7 @@ const btnReturn = document.getElementById("btn-return");
 
 addMoney.innerHTML = money;
 
-btnReturn.href = './views/detailProduct.html?ref=' + productId;
+btnReturn.href = './detailProduct.html?ref=' + productId;
 
 const getProductPlace = (id) => {
   const url = `${urlBase}/products/${id}.json`;

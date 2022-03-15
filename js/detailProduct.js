@@ -11,7 +11,7 @@ const btnEdit = document.getElementById("btn-edit");
 const btnDelete = document.getElementById("btn-delete");
 
 
-btnEdit.href = './views/editProduct.html?ref=' + productId;
+btnEdit.href = './editProduct.html?ref=' + productId;
 
 const deleteProduct = (productId) => {
     const url = `${urlBase}/products/${productId}.json`;
