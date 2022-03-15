@@ -62,7 +62,7 @@ const cardProduct = (title, description, imageUrl, price, category, productId) =
 
   cardText.innerText = `Categoria: ${category}`;
   cardButtonView.innerText = "Ver";
-  cardButtonView.href = `./views/detailProduct.html?ref=${productId}`;
+  cardButtonView.href = `/views/detailProduct.html?ref=${productId}`;
   cardButtonAdd.innerText = "Comprar";
 
   // Build structure
